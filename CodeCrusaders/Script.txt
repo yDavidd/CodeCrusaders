@@ -1,0 +1,259 @@
+create table Disciplina(
+	id_Disciplina SERIAL,
+	nome_Disci varchar(255)NOT NULL,
+	descricao varchar (255) NOT NULL,
+	PRIMARY KEY(id_Disciplina)
+);
+
+create table Aluno(
+	id_Aluno SERIAL,
+	id_Disciplina integer,
+	estado varchar(255) NOT NULL,
+	nome varchar (255) NOT NULL,
+	telefone1 integer NOT NULL,
+	cidade varchar (255) NOT NULL,
+	rua varchar (255) NOT NULL,
+	numero integer NOT NULL,
+	telefone2 integer NOT NULL,
+	unidade integer NOT NULL,
+	ra integer NOT NULL,
+	bairro varchar (255) NOT NULL,
+	PRIMARY KEY(id_Aluno),
+	Foreign key (id_Disciplina) references Disciplina(id_Disciplina)
+);
+---------------------------------------------------------------------------
+INSERT
+DISCIPLINA
+insert into disciplina (nome_Disci, descricao)
+values('Matemática', 'Aulas ás segundas-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Portugues', 'Aulas ás terças-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Historia', 'Aulas ás quartas-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Geografia', 'Aulas ás quintas-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Filosofia', 'Aulas ás sextas-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Arte', 'Aulas ás segunda-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Matemática', 'Aulas ás segundas-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Portugues', 'Aulas ás terças-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Historia', 'Aulas ás quartas-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Geografia', 'Aulas ás quintas-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Filosofia', 'Aulas ás sextas-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Arte', 'Aulas ás segunda-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Matemática', 'Aulas ás segundas-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Portugues', 'Aulas ás terças-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Historia', 'Aulas ás quartas-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Geografia', 'Aulas ás quintas-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Filosofia', 'Aulas ás sextas-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Arte', 'Aulas ás segunda-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Matemática', 'Aulas ás segundas-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Portugues', 'Aulas ás terças-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Historia', 'Aulas ás quartas-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Geografia', 'Aulas ás quintas-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Filosofia', 'Aulas ás sextas-feiras');
+
+insert into disciplina (nome_Disci, descricao)
+values('Arte', 'Aulas ás segunda-feiras');
+------------------------------------------------------------------------------
+UPDATE
+DISCIPLINA
+
+UPDATE disciplina
+SET nome_disci = 'Portugues', descricao= 'Aulas ás segundas-feiras'
+WHERE id_disciplina = 21;
+
+UPDATE disciplina
+SET nome_disci = 'Matematica', descricao= 'Aulas ás segundas-feiras'
+WHERE id_disciplina = 22;
+
+UPDATE disciplina
+SET nome_disci = 'Historia', descricao= 'Aulas ás segundas-feiras'
+WHERE id_disciplina = 23;
+
+UPDATE disciplina
+SET nome_disci = 'Portugues', descricao= 'Aulas ás segundas-feiras'
+WHERE id_disciplina = 24;
+
+UPDATE disciplina
+SET nome_disci = 'Portugues', descricao= 'Aulas ás segundas-feiras'
+WHERE id_disciplina = 25;
+---------------------------------------------------------------------------
+DELETE
+DISCIPLINA
+delete
+from disciplina
+where id_Disciplina in (21, 22, 23, 24, 25);
+---------------------------------------------------------------------------
+SELECT 
+DISCIPLINA
+
+select * from disciplina
+-----------------------------------------------------------------------------
+INSERT 
+ALUNO
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('Julia', 1,111, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('Giovana', 2, 121, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('João', 3, 131, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('Luiz', 4, 141, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('David', 5, 151, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('Guilherme', 7, 161, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('Julia', 1,111, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('Giovana', 2, 121, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('João', 3, 131, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('Luiz', 4, 141, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('David', 5, 151, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('Guilherme', 7, 161, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('Julia', 1,111, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('Giovana', 2, 121, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('João', 3, 131, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('Luiz', 4, 141, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('David', 5, 151, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('Guilherme', 7, 161, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('David', 5, 151, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+insert into aluno (nome, id_disciplina, ra, rua, cidade, estado, numero, bairro, telefone1, telefone2)
+values ('Guilherme', 7, 161, 'Rua dos Bobos', 'São Paulo', 'SP', 238, 'Leopoldina', 99666-8585, 99888-9965);
+--------------------------------------------------------------------------------------------------------------
+UPDATE
+Update aluno
+set nome= 'Otavio',
+ra= 555,
+rua= 'Rua dos Bobos',
+cidade='São Paulo',
+estado= 'SP',
+numero= 238,
+bairro='Leopoldina',
+telefone1= 99666-8585,
+telefone2= 99666-8585
+where id_aluno = 1;
+
+Update aluno
+set nome= 'David',
+ra= 555,
+rua= 'Rua dos Bobos',
+cidade='São Paulo',
+estado= 'SP',
+numero= 238,
+bairro='Leopoldina',
+telefone1= 99666-8585,
+telefone2= 99666-8585
+where id_aluno = 2;
+
+Update aluno
+set nome= 'Guilherme',
+ra= 555,
+rua= 'Rua dos Bobos',
+cidade='São Paulo',
+estado= 'SP',
+numero= 238,
+bairro='Leopoldina',
+telefone1= 99666-8585,
+telefone2= 99666-8585
+where id_aluno = 3;
+
+Update aluno
+set nome= 'Victor',
+ra= 555,
+rua= 'Rua dos Bobos',
+cidade='São Paulo',
+estado= 'SP',
+numero= 238,
+bairro='Leopoldina',
+telefone1= 99666-8585,
+telefone2= 99666-8585
+where id_aluno = 4;
+
+Update aluno
+set nome= 'Otavio',
+ra= 555,
+rua= 'Rua dos Bobos',
+cidade='São Paulo',
+estado= 'SP',
+numero= 238,
+bairro='Leopoldina',
+telefone1= 99666-8585,
+telefone2= 99666-8585
+where id_aluno = 5;
+---------------------------------------------------------------
+DELETE
+delete
+from aluno
+where id_aluno (21, 22, 23, 24, 25);
+-----------------------------------------------------------
+SELECT
+ALUNO
+select * from aluno
+--------------------------------------------------------------
+
+VIEW
+
+create view NomeAlunoDisciplina as
+select aluno.nome, disciplina.nome_disci
+from aluno
+inner join disciplina
+on aluno.id_Aluno = disciplina.id_Disciplina
+group by aluno.nome, disciplina.nome_disci
+
+
+
+
+	
